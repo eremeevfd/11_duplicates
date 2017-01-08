@@ -7,7 +7,6 @@ def find_duplicate_files(path):
     file_list = {}
     duplicates = defaultdict(list)
     for root, dirs, files in os.walk(path):
-        files = [file for file in files if not file[0] == '.']
         try:
             for filename in files:
                 filepath = os.path.join(root, filename)
